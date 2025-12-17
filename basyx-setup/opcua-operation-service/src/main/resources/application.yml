@@ -1,0 +1,16 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: opcua-operation-service
+
+opcua:
+  # Use host.docker.internal to reach OPC UA server on host machine from Docker
+  endpoint: opc.tcp://host.docker.internal:4840
+
+logging:
+  level:
+    root: INFO
+    com.konecranes: DEBUG
+    org.eclipse.milo: INFO

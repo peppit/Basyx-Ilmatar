@@ -1,0 +1,6 @@
+[
+  {
+    "uniqueId": "aasServer",
+    "submodelEndpoint": "http://localhost:8081/submodels"
+  }
+]

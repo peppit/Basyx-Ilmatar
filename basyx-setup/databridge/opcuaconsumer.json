@@ -1,0 +1,15 @@
+[
+  {
+    "uniqueId": "craneOpcUa",
+    "serverUrl": "opc.tcp://localhost:4840",
+    "serverPort": 4840,
+    "pathToService": "",
+    "nodeInformation": "ns=7;s=SCF.PLC.DX_Custom_V.Controls.Hoist.Speed",
+    "username": "",
+    "password": "",
+    "configuration": {
+      "allowedSecurityPolicies": "None",
+      "requestedPublishingInterval": "1000"
+    }
+  }
+]

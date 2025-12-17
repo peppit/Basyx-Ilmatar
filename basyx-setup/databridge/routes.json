@@ -1,0 +1,14 @@
+[
+  {
+    "routeId": "opcuaToCraneAAS",
+    "datasource": "hoistSpeed",
+    "transformers": [
+      "jsonUnmarshaller",
+      "opcuaToAasTransformer"
+    ],
+    "datasinks": [
+      "aasServer"
+    ],
+    "trigger": "event"
+  }
+]
