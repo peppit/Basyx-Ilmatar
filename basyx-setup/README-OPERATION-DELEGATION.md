@@ -139,9 +139,11 @@ Using Eclipse Milo:
 | Operation | Description | OPC UA Node | Default Duration | Status |
 |-----------|-------------|-------------|------------------|--------|
 | **Hoist_Down** | Lower crane hoist | `ns=7;s=...Hoist.Down` | 10 seconds | ✅ Working |
-| **Hoist_Up** | Raise crane hoist | `ns=7;s=...Hoist.Up` | 10 seconds | ⏳ Not implemented |
-| **Trolley_Left** | Move trolley left | `ns=7;s=...Trolley.Left` | 10 seconds | ⏳ Not implemented |
-| **Trolley_Right** | Move trolley right | `ns=7;s=...Trolley.Right` | 10 seconds | ⏳ Not implemented |
+| **Hoist_Up** | Raise crane hoist | `ns=7;s=...Hoist.Up` | 10 seconds | ✅ Working |
+| **Trolley_Forward** | Move trolley forward | `ns=7;s=...Trolley.Forward` | 10 seconds | ✅ Working |
+| **Trolley_Backward** | Move trolley backward | `ns=7;s=...Trolley.Backward` | 10 seconds | ✅ Working |
+| **Bridge_Forward** | Move bridge forward | `ns=7;s=...Bridge.Forward` | 10 seconds | ✅ Working |
+| **Bridge_Backward** | Move bridge backward | `ns=7;s=...Bridge.Backward` | 10 seconds | ✅ Working |
 
 All operations:
 - Accept optional `duration_ms` parameter (not yet implemented)

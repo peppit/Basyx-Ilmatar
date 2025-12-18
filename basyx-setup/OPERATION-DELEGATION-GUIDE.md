@@ -155,26 +155,36 @@ function Add-CraneOperation {
 Write-Host "`nAdding crane operations to AAS...`n"
 
 Add-CraneOperation `
-    -IdShort "HoistDown" `
+    -IdShort "Hoist_Down" `
     -Description "Lower the crane hoist" `
     -DelegationUrl "http://opcua-operation-service:8087/crane/hoist-down"
 
 Add-CraneOperation `
-    -IdShort "HoistUp" `
+    -IdShort "Hoist_Up" `
     -Description "Raise the crane hoist" `
     -DelegationUrl "http://opcua-operation-service:8087/crane/hoist-up"
 
 Add-CraneOperation `
-    -IdShort "TrolleyLeft" `
-    -Description "Move the trolley left" `
-    -DelegationUrl "http://opcua-operation-service:8087/crane/trolley-left"
+    -IdShort "Trolley_Forward" `
+    -Description "Move the trolley forward" `
+    -DelegationUrl "http://opcua-operation-service:8087/crane/trolley-forward"
 
 Add-CraneOperation `
-    -IdShort "TrolleyRight" `
-    -Description "Move the trolley right" `
-    -DelegationUrl "http://opcua-operation-service:8087/crane/trolley-right"
+    -IdShort "Trolley_Backward" `
+    -Description "Move the trolley backward" `
+    -DelegationUrl "http://opcua-operation-service:8087/crane/trolley-backward"
 
-Write-Host "`nDone! Operations added to submodel.`n"
+Add-CraneOperation `
+    -IdShort "Bridge_Forward" `
+    -Description "Move the bridge forward" `
+    -DelegationUrl "http://opcua-operation-service:8087/crane/bridge-forward"
+
+Add-CraneOperation `
+    -IdShort "Bridge_Backward" `
+    -Description "Move the bridge backward" `
+    -DelegationUrl "http://opcua-operation-service:8087/crane/bridge-backward"
+
+Write-Host "`nDone! All 6 crane operations added to submodel.`n"
 Write-Host "Open AAS Web UI: http://localhost:3000"
 ```
 
