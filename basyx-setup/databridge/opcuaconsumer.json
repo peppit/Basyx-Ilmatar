@@ -1,6 +1,6 @@
 [
   {
-    "uniqueId": "craneOpcUa",
+    "uniqueId": "hoistSpeed",
     "serverUrl": "opc.tcp://localhost:4840",
     "serverPort": 4840,
     "pathToService": "",

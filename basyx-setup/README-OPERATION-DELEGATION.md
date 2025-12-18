@@ -36,7 +36,7 @@ basyx-setup/
 ├── add-operations.ps1            # NEW: Script to add operations via REST API
 ├── OPERATION-DELEGATION-GUIDE.md # NEW: Detailed setup instructions
 └── aas/
-    └── IlmatarAAS.aasx          # TODO: Edit to add operations permanently
+    └── IlmatarAAS.aasx          # ✅ Contains invocationDelegation qualifier
 ```
 
 ## 🚀 Quick Start
@@ -47,8 +47,7 @@ basyx-setup/
 # Navigate to basyx-setup directory
 cd basyx-setup
 
-# IMPORTANT: Use -v flag to remove old MongoDB data and avoid conflicts
-docker-compose down -v
+# Start services
 docker-compose up -d
 
 # Wait for services to be healthy (about 1-2 minutes)
@@ -56,42 +55,9 @@ docker-compose up -d
 docker logs opcua-operation-service
 ```
 
-**⚠️ Important:** Always use `docker-compose down -v` before restarting to clear MongoDB data. Without `-v`, old operation data persists and causes "not invokable" errors.
+**✅ Note:** The `invocationDelegation` qualifier is now permanently stored in the AASX file, so the operation works immediately after startup - no manual configuration needed!
 
-### 2. Configure Operation Delegation (REQUIRED after restart)
-
-The AASX file contains operations but **without** the `invocationDelegation` qualifier. You need to add it manually after services start:
-
-```powershell
-# Wait for BaSyx to fully start (about 1-2 minutes after docker-compose up)
-# Then add delegation qualifier to Hoist_Down operation
-
-$operation = @{
-    modelType = "Operation"
-    idShort = "Hoist_Down"
-    description = @(@{language = "en"; text = "Lower the crane hoist"})
-    qualifiers = @(@{type = "invocationDelegation"; value = "http://opcua-operation-service:8087/crane/hoist-down"})
-    inputVariables = @(
-        @{value = @{modelType = "Property"; idShort = "value"; valueType = "xs:boolean"; value = "true"}}
-    )
-    outputVariables = @(
-        @{value = @{modelType = "Property"; idShort = "value"; valueType = "xs:boolean"; value = "true"}}
-    )
-} | ConvertTo-Json -Depth 10
-
-Invoke-WebRequest -Uri "http://localhost:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vNTAxMF81MTUwXzExNTJfMTEwMg/submodel-elements/Hoist_Down" -Method Put -Body $operation -ContentType "application/json"
-```
-
-**Expected response:** `StatusCode : 204` (success)
-
-**⚠️ Important:** 
-- You must run this command every time you run `docker-compose down -v` and restart
-- Wait 1-2 minutes after `docker-compose up -d` for services to be fully ready
-- If you get 405 error, services aren't ready yet - wait longer and try again
-
-**Why?** The `invocationDelegation` qualifier is stored in MongoDB, not in the AASX file. To make it permanent, you need to edit the AASX file (see Production Deployment section).
-
-### 3. Test from Web UI
+### 2. Test from Web UI
 
 1. **Start your OPC UA server** on `opc.tcp://localhost:4840`
 2. Open AAS Web UI: http://localhost:3000
@@ -106,7 +72,7 @@ Invoke-WebRequest -Uri "http://localhost:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNv
 - OPC UA node toggles: `false` → `true` (10 seconds) → `false`
 - Service logs show: "Successfully wrote true" and "Successfully wrote false"
 
-### 4. Test Directly
+### 3. Test Directly
 
 ```powershell
 # Test the service directly (bypasses BaSyx) - recommended first test
@@ -235,22 +201,7 @@ docker exec -it opcua-operation-service curl http://localhost:8087/crane/hoist-d
 
 ### Problem: Button doesn't work after restarting containers
 
-**Cause:** The `invocationDelegation` qualifier is stored in MongoDB and lost when you run `docker-compose down -v`
-
-**Solution:**
-```powershell
-# Re-add the delegation qualifier (see Step 2 above)
-Start-Sleep -Seconds 10;
-$operation = @{
-    modelType = "Operation"
-    idShort = "Hoist_Down"
-    description = @(@{language = "en"; text = "Lower the crane hoist"})
-    qualifiers = @(@{type = "invocationDelegation"; value = "http://opcua-operation-service:8087/crane/hoist-down"})
-    inputVariables = @(@{value = @{modelType = "Property"; idShort = "value"; valueType = "xs:boolean"; value = "true"}})
-    outputVariables = @(@{value = @{modelType = "Property"; idShort = "value"; valueType = "xs:boolean"; value = "true"}})
-} | ConvertTo-Json -Depth 10
-Invoke-WebRequest -Uri "http://localhost:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vNTAxMF81MTUwXzExNTJfMTEwMg/submodel-elements/Hoist_Down" -Method Put -Body $operation -ContentType "application/json"
-```
+**Status:** ✅ **FIXED** - The `invocationDelegation` qualifier is now permanently stored in the AASX file. The button works immediately after restart with no manual configuration needed!
 
 ### Problem: Operations don't appear in Web UI
 
@@ -326,22 +277,18 @@ docker-compose up -d
 
 ## 📝 Next Steps
 
-### For Testing (Current Setup):
+### Current Setup (Ready to Use):
 1. ✅ Start services: `docker-compose up -d`
-2. ✅ **Run the configuration command from Step 2** (required every time)
-3. ✅ Test from Web UI
-4. ✅ Verify OPC UA changes
+2. ✅ Test from Web UI - works immediately!
+3. ✅ Verify OPC UA changes
 
-**Note:** The delegation qualifier must be added via REST API each time you restart with `docker-compose down -v`. To avoid this, follow the Production steps below.
+**✅ Production Ready:** The `invocationDelegation` qualifier is permanently stored in the AASX file!
 
-### For Production (Permanent):
-1. ✅ Edit AASX file to add `invocationDelegation` qualifier to operations
-2. ✅ Configure OPC UA endpoint
-3. ✅ Add more operations as needed
-4. ✅ Set up authentication/security
-5. ✅ Deploy to production environment
-
-**Benefit:** Once the qualifier is in the AASX file, you won't need to run the configuration command anymore.
+### For Further Enhancement:
+1. ⏳ Add more operations (Hoist_Up, Trolley_Left, Trolley_Right)
+2. ⏳ Configure production OPC UA endpoint
+3. ⏳ Set up authentication/security
+4. ⏳ Deploy to production environment
 
 ## 🎓 Understanding the Code
 
