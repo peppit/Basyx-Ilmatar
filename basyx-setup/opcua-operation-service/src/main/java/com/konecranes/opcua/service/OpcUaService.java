@@ -135,6 +135,48 @@ public class OpcUaService {
     }
 
     /**
+     * Write a double value to an OPC UA node
+     * If double fails with type mismatch, tries Float, then Int32
+     */
+    public void writeDouble(String nodeId, double value) throws ExecutionException, InterruptedException {
+        NodeId node = NodeId.parse(nodeId);
+        
+        // Try Double first
+        DataValue dataValue = new DataValue(new Variant(value));
+        StatusCode status = client.writeValue(node, dataValue).get();
+        
+        if (status.isGood()) {
+            logger.info("Successfully wrote {} (Double) to node: {}", value, nodeId);
+            return;
+        }
+        
+        // If type mismatch, try Float
+        if (status.getValue() == 0x80740000L) { // Bad_TypeMismatch
+            logger.warn("Double type mismatch for {}, trying Float", nodeId);
+            dataValue = new DataValue(new Variant((float)value));
+            status = client.writeValue(node, dataValue).get();
+            
+            if (status.isGood()) {
+                logger.info("Successfully wrote {} (Float) to node: {}", value, nodeId);
+                return;
+            }
+            
+            // If still failing, try Int32
+            logger.warn("Float type mismatch for {}, trying Int32", nodeId);
+            dataValue = new DataValue(new Variant((int)value));
+            status = client.writeValue(node, dataValue).get();
+            
+            if (status.isGood()) {
+                logger.info("Successfully wrote {} (Int32) to node: {}", (int)value, nodeId);
+                return;
+            }
+        }
+        
+        logger.error("Failed to write to node: {}. Status: {}", nodeId, status);
+        throw new RuntimeException("OPC UA write failed: " + status);
+    }
+
+    /**
      * Write a boolean pulse (true, then false after delay)
      */
     public void writePulse(String nodeId, long durationMs) throws ExecutionException, InterruptedException {
