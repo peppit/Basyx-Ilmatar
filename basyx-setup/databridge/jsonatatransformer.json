@@ -3,6 +3,6 @@
     "uniqueId": "opcuaToAasTransformer",
     "queryPath": "opcuaToAas.json",
     "inputType": "JsonString",
-    "outputType": "JsonString"
+    "outputType": "AASSubmodelElement"
   }
 ]

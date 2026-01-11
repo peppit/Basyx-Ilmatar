@@ -1,15 +1,12 @@
 [
   {
     "uniqueId": "hoistSpeed",
-    "serverUrl": "opc.tcp://localhost:4840",
-    "serverPort": 4840,
-    "pathToService": "",
-    "nodeInformation": "ns=7;s=SCF.PLC.DX_Custom_V.Controls.Hoist.Speed",
-    "username": "",
-    "password": "",
-    "configuration": {
-      "allowedSecurityPolicies": "None",
-      "requestedPublishingInterval": "1000"
-    }
+    "serverUrl": "opc.tcp://host.docker.internal:4840",
+    "nodeInformation": [
+      {
+        "nodeId": "ns=7;s=SCF.PLC.DX_Custom_V.Controls.Hoist.Speed"
+      }
+    ],
+    "requestPublishingInterval": 1000
   }
 ]

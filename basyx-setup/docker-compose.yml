@@ -59,6 +59,7 @@ services:
       AAS_DISCOVERY_PATH: http://localhost:8084/lookup/shells
       LOGO_PATH: Konecranes-logo.jpg
       DASHBOARD_SERVICE_PATH: http://localhost:8085/api/elements
+      ALLOW_EDITING: "true"
     restart: always
     depends_on:
       aas-env:
@@ -79,7 +80,7 @@ services:
   
   opcua-aas-bridge:
     build:
-      context: ../opcua-aas-bridge
+      context: ./opcua-aas-bridge
       dockerfile: Dockerfile
     container_name: opcua-aas-bridge
     environment:
@@ -90,7 +91,7 @@ services:
       - "host.docker.internal:host-gateway"
     depends_on:
       aas-env:
-        condition: service_healthy
+       condition: service_healthy
   
   aas-discovery:
     image: eclipsebasyx/aas-discovery:2.0.0-SNAPSHOT
@@ -144,16 +145,16 @@ services:
     depends_on:
       mongo:
         condition: service_healthy
-  databridge:
-    image: eclipsebasyx/databridge:1.0.0-milestone-08
-    container_name: databridge
-    network_mode: host
-    volumes:
-      - ./databridge:/usr/share/config
-    restart: always
-    depends_on:
-      - aas-env
-      - aas-registry
-      - sm-registry
+ # databridge:
+  #  image: eclipsebasyx/databridge:1.0.0-milestone-08
+   # container_name: databridge
+    #extra_hosts:
+     # - "host.docker.internal:host-gateway"
+   # volumes:
+    #  - ./databridge:/usr/share/config
+    #restart: always
+   # depends_on:
+    #  aas-env:
+     #   condition: service_healthy
 
 
