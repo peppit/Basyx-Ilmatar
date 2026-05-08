@@ -1,6 +1,10 @@
 # Local secrets — never commit
 .env
 
+# Large binary files
+*.tar
+*.tar.gz
+
 # Java build output
 target/
 
