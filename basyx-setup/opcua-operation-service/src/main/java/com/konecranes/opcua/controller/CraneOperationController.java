@@ -86,18 +86,19 @@ public class CraneOperationController {
      * Input: Speed value (0-100) as double
      * Output: Success status (boolean)
      */
-    @PostMapping(value = "/crane/set-hoist-speed", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/crane/hoist-speed", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, Object>> setHoistSpeed(@RequestBody String input) {
         logger.info("Executing SetHoistSpeed operation");
         logger.debug("Input received: {}", input);
+        Map<String, Float> params = parseOperationInputFloat(input);
 
         try {
             authorizeAccessIfConfigured();
-            double speed = Double.parseDouble(input.trim());
+            float speed = params.getOrDefault("speed", 0.0f);
             if (speed < 0 || speed > 100) {
                 throw new IllegalArgumentException("Speed must be between 0 and 100");
             }
-            opcUaService.writeDouble(HOIST_SPEED_NODE, speed);
+            opcUaService.writeFloat(HOIST_SPEED_NODE, speed);
 
             Map<String, Object> response = new HashMap<>();
             response.put("status", "SUCCESS");
@@ -116,18 +117,19 @@ public class CraneOperationController {
      * Input: Speed value (0-100) as double
      * Output: Success status (boolean)
      */
-    @PostMapping(value = "/crane/set-trolley-speed", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/crane/trolley-speed", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, Object>> setTrolleySpeed(@RequestBody String input) {
         logger.info("Executing SetTrolleySpeed operation");
         logger.debug("Input received: {}", input);
+        Map<String, Float> params = parseOperationInputFloat(input);
 
         try {
             authorizeAccessIfConfigured();
-            double speed = Double.parseDouble(input.trim());
+            float speed = params.getOrDefault("speed", 0.0f);
             if (speed < 0 || speed > 100) {
                 throw new IllegalArgumentException("Speed must be between 0 and 100");
             }
-            opcUaService.writeDouble(TROLLEY_SPEED_NODE, speed);
+            opcUaService.writeFloat(TROLLEY_SPEED_NODE, speed);
 
             Map<String, Object> response = new HashMap<>();
             response.put("status", "SUCCESS");
@@ -146,18 +148,19 @@ public class CraneOperationController {
      * Input: Speed value (0-100) as double
      * Output: Success status (boolean)
      */
-    @PostMapping(value = "/crane/set-bridge-speed", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/crane/bridge-speed", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, Object>> setBridgeSpeed(@RequestBody String input) {
         logger.info("Executing SetBridgeSpeed operation");
         logger.debug("Input received: {}", input);
+        Map<String, Float> params = parseOperationInputFloat(input);
 
         try {
             authorizeAccessIfConfigured();
-            double speed = Double.parseDouble(input.trim());
+            float speed = params.getOrDefault("speed", 0.0f);
             if (speed < 0 || speed > 100) {
                 throw new IllegalArgumentException("Speed must be between 0 and 100");
             }
-            opcUaService.writeDouble(BRIDGE_SPEED_NODE, speed);
+            opcUaService.writeFloat(BRIDGE_SPEED_NODE, speed);
 
             Map<String, Object> response = new HashMap<>();
             response.put("status", "SUCCESS");
@@ -369,7 +372,6 @@ public class CraneOperationController {
                 boolean trolleyDone = controlTrolleyAxis(trolley, currentTrolley, toleranceMm, fast);
                 boolean hoistDone = controlHoistAxis(hoist, currentHoist, toleranceMm, fast);
 
-                incrementWatchdogSafe();
 
                 if (bridgeDone && trolleyDone && hoistDone) {
                     stopAllAxes();
@@ -486,59 +488,6 @@ public class CraneOperationController {
             opcUaService.writeBoolean(HOIST_UP_NODE, true);
         }
         return false;
-    }
-
-    private double rampHorizontal(double error, boolean fast) {
-        double abs = Math.abs(error);
-        double speed;
-
-        if (abs < 15) {
-            speed = 0.6;
-        } else if (abs < 2000) {
-            speed = abs / 20.0;
-        } else {
-            speed = 100.0;
-        }
-
-        if (fast && speed < 15.0) {
-            speed = 15.0;
-        }
-
-        return clamp(speed, 0.0, 100.0);
-    }
-
-    private double rampLower(double error) {
-        double abs = Math.abs(error);
-        double speed;
-
-        if (abs < 8) {
-            speed = 2.0;
-        } else if (abs < 400) {
-            speed = abs / 4.0;
-        } else {
-            speed = 100.0;
-        }
-
-        return clamp(speed, 0.0, 100.0);
-    }
-
-    private double rampLift(double error) {
-        double abs = Math.abs(error);
-        double speed;
-
-        if (abs < 8) {
-            speed = 4.0;
-        } else if (abs < 200) {
-            speed = abs / 2.0;
-        } else {
-            speed = 100.0;
-        }
-
-        return clamp(speed, 0.0, 100.0);
-    }
-
-    private double clamp(double value, double min, double max) {
-        return Math.max(min, Math.min(max, value));
     }
 
     private double readPositionMm(String nodeId) throws Exception {
@@ -668,6 +617,56 @@ public class CraneOperationController {
                             String idShort = value.get("idShort").getAsString();
                             String valueStr = value.get("value").getAsString();
                             double val = Double.parseDouble(valueStr);
+                            params.put(idShort, val);
+                        }
+                    }
+                }
+            }
+
+            logger.debug("Parsed parameters: {}", params);
+            return params;
+
+        } catch (Exception e) {
+            logger.error("Failed to parse input parameters: {}", input, e);
+            throw new RuntimeException("Invalid input format: " + e.getMessage(), e);
+        }
+    }
+
+    private Map<String, Float> parseOperationInputFloat(String input) {
+        Map<String, Float> params = new HashMap<>();
+
+        try {
+            JsonElement element = JsonParser.parseString(input);
+
+            // Handle both array format and object format
+            if (element.isJsonArray()) {
+                // Direct array of input variables
+                JsonArray inputVars = element.getAsJsonArray();
+
+                for (JsonElement elem : inputVars) {
+                    JsonObject varObj = elem.getAsJsonObject();
+                    if (varObj.has("value")) {
+                        JsonObject value = varObj.getAsJsonObject("value");
+                        String idShort = value.get("idShort").getAsString();
+                        String valueStr = value.get("value").getAsString();
+                        float val = Float.parseFloat(valueStr);
+                        params.put(idShort, val);
+                    }
+                }
+            } else if (element.isJsonObject()) {
+                JsonObject json = element.getAsJsonObject();
+
+                // Check for inputVariables field
+                if (json.has("inputVariables")) {
+                    JsonArray inputVars = json.getAsJsonArray("inputVariables");
+
+                    for (JsonElement elem : inputVars) {
+                        JsonObject varObj = elem.getAsJsonObject();
+                        if (varObj.has("value")) {
+                            JsonObject value = varObj.getAsJsonObject("value");
+                            String idShort = value.get("idShort").getAsString();
+                            String valueStr = value.get("value").getAsString();
+                            float val = Float.parseFloat(valueStr);
                             params.put(idShort, val);
                         }
                     }

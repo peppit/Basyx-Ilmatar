@@ -1,42 +1,5 @@
 [
   {
-    "uniqueId": "HoistSpeedSub",
-    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vNTAxMF81MTUwXzExNTJfMTEwMg",
-    "idShortPath": "Hoist_Speed",
-    "api": "DotAAS-V3"
-  },
-  {
-    "uniqueId": "TrolleySpeedSub",
-    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vNTAxMF81MTUwXzExNTJfMTEwMg",
-    "idShortPath": "Trolley_Speed",
-    "api": "DotAAS-V3"
-  },
-  {
-    "uniqueId": "BridgeSpeedSub",
-    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vNTAxMF81MTUwXzExNTJfMTEwMg",
-    "idShortPath": "Bridge_Speed",
-    "api": "DotAAS-V3"
-  },
-  {
-    "uniqueId": "TrolleyPositionSub",
-    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9hZG1pbi1zaGVsbC5pby9pZHRhL1N1Ym1vZGVsVGVtcGxhdGUvRGF0YU1vZGVsZm9yQXNzZXRMb2NhdGlvbi8xLzA",
-    "idShortPath": "Trolley_Position_mm",
-    "api": "DotAAS-V3"
-  },
-  {
-    "uniqueId": "BridgePositionSub",
-    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9hZG1pbi1zaGVsbC5pby9pZHRhL1N1Ym1vZGVsVGVtcGxhdGUvRGF0YU1vZGVsZm9yQXNzZXRMb2NhdGlvbi8xLzA",
-    "idShortPath": "Bridge_Position_mm",
-    "api": "DotAAS-V3"
-  },
-  {
-    "uniqueId": "HoistPositionSub",
-    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9hZG1pbi1zaGVsbC5pby9pZHRhL1N1Ym1vZGVsVGVtcGxhdGUvRGF0YU1vZGVsZm9yQXNzZXRMb2NhdGlvbi8xLzA",
-    "idShortPath": "Hoist_Position_mm",
-    "api": "DotAAS-V3"
-  },
-
-  {
     "uniqueId": "TrolleyPositionSub2",
     "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9hZG1pbi1zaGVsbC5pby9pZHRhL1N1Ym1vZGVsVGVtcGxhdGUvRGF0YU1vZGVsZm9yQXNzZXRMb2NhdGlvbi8xLzA",
     "idShortPath": "AssetTraces.LocationRecords%5B0%5D.Position.Y_Trolley_Position",
@@ -53,7 +16,202 @@
     "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9hZG1pbi1zaGVsbC5pby9pZHRhL1N1Ym1vZGVsVGVtcGxhdGUvRGF0YU1vZGVsZm9yQXNzZXRMb2NhdGlvbi8xLzA",
     "idShortPath": "AssetTraces.LocationRecords%5B0%5D.Position.Z_Hoist_Position",
     "api": "DotAAS-V3"
+  },
+
+  {
+    "uniqueId": "TrolleyPositionSub_mm",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.Position.Position_mm",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgePositionSub_mm",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.Position.Position_mm",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistPositionSub_mm",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Position.Position_mm",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyPosition_m",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.Position.Position_m",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgePosition_m",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.Position.Position_m",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistPosition_m",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Position.Position_m",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyPosition_Raw",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.Position_Raw",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgePosition_Raw",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.Position_Raw",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistPosition_Raw",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Position_Raw",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistCalibrated",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Position.Calibrated",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeCalibrated",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.Position.Calibrated",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyCalibrated",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.Position.Calibrated",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistPosition_UpStop",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Position.UpStop_m",
+    "api": "DotAAS-V3"
+  },
+
+  {
+    "uniqueId": "Load_t",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Load.Load_t",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TaredLoad_t",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Load.TaredLoad_t",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "GrossLoad_Percentage",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Load.GrossLoad_Percentage",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TaredLoad_Percentage",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.Load.TaredLoad_Percentage",
+    "api": "DotAAS-V3"
+  },
+
+  {
+    "uniqueId": "Watchdog",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Controls.Watchdog",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "AccessCode",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Controls.AccessCode",
+    "api": "DotAAS-V3"
+  },
+
+  {
+    "uniqueId": "Inching",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "RadioSelection.Inching",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "MicroSpeed",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "RadioSelection.MicroSpeed",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "RopeAngleFeaturesBypass",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "RadioSelection.RopeAngleFeaturesBypass",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "SwayControl",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "RadioSelection.SwayControl",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "SwayControl_SlingLength_mm",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "RadioSelection.SwayControl_SlingLength_mm",
+    "api": "DotAAS-V3"
+  },
+
+  {
+    "uniqueId": "CraneOnTime_s",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "ConditionMonitoring.CraneOnTime_s",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "FaultActive_s",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "ConditionMonitoring.FaultActive_s",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "AlarmActive_s",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "ConditionMonitoring.AlarmActive_s",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DriveTime_s",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "ConditionMonitoring.DriveTime_s",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DriveTimeWithLoad_s",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "ConditionMonitoring.DriveTimeWithLoad_s",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DriveTimeWithoutLoad_s",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "ConditionMonitoring.DriveTimeWithoutLoad_s",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "StoppedTimeWithLoad_s",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "ConditionMonitoring.StoppedTimeWithLoad_s",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "StoppedTimeWithoutLoad_s",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "ConditionMonitoring.StoppedTimeWithoutLoad_s",
+    "api": "DotAAS-V3"
   }
-
 ]
-

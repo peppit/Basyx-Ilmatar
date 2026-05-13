@@ -1,45 +1,228 @@
 [
   {
-    "routeId": "opcua-to-aas-hoist",
-    "datasource": "hoistSpeed",
-    "transformers": ["dataValueToJson", "jsonataExtractValue"],
-    "datasinks": ["HoistSpeedSub"],
-    "trigger": "event"
-  },
-  {
-    "routeId": "opcua-to-aas-trolley",
-    "datasource": "trolleySpeed",
-    "transformers": ["dataValueToJson", "jsonataExtractValue"],
-    "datasinks": ["TrolleySpeedSub"],
-    "trigger": "event"
-  },
-  {
-    "routeId": "opcua-to-aas-bridge",
-    "datasource": "bridgeSpeed",
-    "transformers": ["dataValueToJson", "jsonataExtractValue"],
-    "datasinks": ["BridgeSpeedSub"],
-    "trigger": "event"
-  },
-  {
     "routeId": "opcua-to-aas-trolley-position",
     "datasource": "trolleyPositionmm",
     "transformers": ["dataValueToJson", "jsonataExtractValue"],
-    "datasinks": ["TrolleyPositionSub", "TrolleyPositionSub2"],
+    "datasinks": ["TrolleyPositionSub_mm", "TrolleyPositionSub2"],
     "trigger": "event"
   },
   {
     "routeId": "opcua-to-aas-bridge-position",
     "datasource": "bridgePositionmm",
     "transformers": ["dataValueToJson", "jsonataExtractValue"],
-    "datasinks": ["BridgePositionSub", "BridgePositionSub2"],
+    "datasinks": ["BridgePositionSub_mm", "BridgePositionSub2"],
     "trigger": "event"
   },
   {
     "routeId": "opcua-to-aas-hoist-position",
     "datasource": "hoistPositionmm",
     "transformers": ["dataValueToJson", "jsonataExtractValue"],
-    "datasinks": ["HoistPositionSub", "HoistPositionSub2"],
+    "datasinks": ["HoistPositionSub_mm", "HoistPositionSub2"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-position_m",
+    "datasource": "trolleyPosition_m",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyPosition_m"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-position_m",
+    "datasource": "bridgePosition_m",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgePosition_m"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoist-position_m",
+    "datasource": "hoistPosition_m",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistPosition_m"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-position_raw",
+    "datasource": "trolleyPosition_raw",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyPosition_Raw"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-position_raw",
+    "datasource": "bridgePosition_raw",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgePosition_Raw"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoist-position_raw",
+    "datasource": "hoistPosition_raw",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistPosition_Raw"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoistUpstop",
+    "datasource": "hoistPosition_UpStop",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistPosition_UpStop"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-watchdog",
+    "datasource": "watchdog",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["Watchdog"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-access-code",
+    "datasource": "accessCode",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["AccessCode"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-inching",
+    "datasource": "inching",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["Inching"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-micro-speed",
+    "datasource": "microSpeed",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["MicroSpeed"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-rope-angle-features-bypass",
+    "datasource": "ropeAngleFeaturesBypass",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["RopeAngleFeaturesBypass"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-sway-control",
+    "datasource": "swayControl",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["SwayControl"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-sway-control-sling-length-mm",
+    "datasource": "swayControl_SlingLength_mm",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["SwayControl_SlingLength_mm"],
+    "trigger": "event"
+  },
+
+  {
+    "routeId": "opcua-to-aas-hoist-calibrated",
+    "datasource": "hoistCalibrated",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistCalibrated"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-calibrated",
+    "datasource": "bridgeCalibrated",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeCalibrated"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-calibrated",
+    "datasource": "trolleyCalibrated",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyCalibrated"],
+    "trigger": "event"
+  },
+
+  {
+    "routeId": "opcua-to-aas-load",
+    "datasource": "load_t",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["Load_t"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-tared-load",
+    "datasource": "taredLoad_t",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TaredLoad_t"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-gross-load",
+    "datasource": "grossLoad_percentage",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["GrossLoad_Percentage"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-tared-load-percentage",
+    "datasource": "taredLoad_percentage",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TaredLoad_Percentage"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-craneOnTime",
+    "datasource": "craneOnTime_s",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["CraneOnTime_s"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-faultActive_s",
+    "datasource": "faultActive_s",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["FaultActive_s"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-alarmActive_s",
+    "datasource": "alarmActive_s",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["AlarmActive_s"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-driveTime_s",
+    "datasource": "driveTime_s",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DriveTime_s"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-driveTimeWithLoad_s",
+    "datasource": "driveTimeWithLoad_s",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DriveTimeWithLoad_s"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-driveTimeWithoutLoad_s",
+    "datasource": "driveTimeWithoutLoad_s",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DriveTimeWithoutLoad_s"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-stoppedTimeWithoutLoad_s",
+    "datasource": "stoppedTimeWithoutLoad_s",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["StoppedTimeWithoutLoad_s"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-stoppedTimeWithLoad_s",
+    "datasource": "stoppedTimeWithLoad_s",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["StoppedTimeWithLoad_s"],
     "trigger": "event"
   }
-
 ]

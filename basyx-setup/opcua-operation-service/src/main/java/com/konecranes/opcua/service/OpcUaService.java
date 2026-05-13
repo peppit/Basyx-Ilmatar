@@ -380,7 +380,7 @@ public class OpcUaService {
 
         // Fallback to generic numeric write handling
         logger.warn("Int16 write failed for {}, trying numeric fallback", nodeId);
-        writeDouble(nodeId, value);
+        writeFloat(nodeId, value);
     }
 
     /**
@@ -410,14 +410,14 @@ public class OpcUaService {
         }
 
         logger.warn("Int32 write failed for {}, trying numeric fallback", nodeId);
-        writeDouble(nodeId, value);
+        writeFloat(nodeId, value);
     }
 
     /**
-     * Write a double value to an OPC UA node
-     * If double fails with type mismatch, tries Float, then Int32
+     * Write a float value to an OPC UA node
+     * If float fails with type mismatch, tries Double, then Int32
      */
-    public void writeDouble(String nodeId, double value) throws ExecutionException, InterruptedException {
+    public void writeFloat(String nodeId, float value) throws ExecutionException, InterruptedException {
         try {
             ensureConnected();
         } catch (InterruptedException e) {
@@ -432,30 +432,27 @@ public class OpcUaService {
 
         NodeId node = NodeId.parse(nodeId);
         
-        // Try Double first
-        DataValue dataValue = new DataValue(new Variant(value));
-        StatusCode status = client.writeValue(node, dataValue).get();
+        // Try Float first
+        StatusCode status = client.writeValues(List.of(node), List.of(DataValue.valueOnly(new Variant((float) value)))).get().get(0);
         
         if (status.isGood()) {
-            logger.info("Successfully wrote {} (Double) to node: {}", value, nodeId);
+            logger.info("Successfully wrote {} (Float) to node: {}", value, nodeId);
             return;
         }
         
-        // If type mismatch, try Float
+        // If type mismatch, try Double
         if (status.getValue() == 0x80740000L) { // Bad_TypeMismatch
-            logger.warn("Double type mismatch for {}, trying Float", nodeId);
-            dataValue = new DataValue(new Variant((float)value));
-            status = client.writeValue(node, dataValue).get();
+            logger.warn("Float type mismatch for {}, trying Double", nodeId);
+            status = client.writeValues(List.of(node), List.of(DataValue.valueOnly(new Variant((double) value)))).get().get(0);
             
             if (status.isGood()) {
-                logger.info("Successfully wrote {} (Float) to node: {}", value, nodeId);
+                logger.info("Successfully wrote {} (Double) to node: {}", value, nodeId);
                 return;
             }
             
             // If still failing, try Int32
             logger.warn("Float type mismatch for {}, trying Int32", nodeId);
-            dataValue = new DataValue(new Variant((int)value));
-            status = client.writeValue(node, dataValue).get();
+            status = client.writeValues(List.of(node), List.of(DataValue.valueOnly(new Variant((int) value)))).get().get(0);
             
             if (status.isGood()) {
                 logger.info("Successfully wrote {} (Int32) to node: {}", (int)value, nodeId);
