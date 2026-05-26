@@ -329,5 +329,236 @@
     "transformers": ["dataValueToJson", "jsonataExtractValue"],
     "datasinks": ["TrolleyDiagnosticsBypassActive"],
     "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoist-controlsignals-direction1-request",
+    "datasource": "hoist_controlsignals_direction1_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistControlSignals_Direction1_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoist-controlsignals-direction2-request",
+    "datasource": "hoist_controlsignals_direction2_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistControlSignals_Direction2_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoist-controlsignals-speed-request",
+    "datasource": "hoist_controlsignals_speed_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistControlSignals_Speed_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoist-controlsignals-speed-feedback",
+    "datasource": "hoist_controlsignals_speed_feedback",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistControlSignals_SpeedFeedback"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoist-controlsignals-speed-feedback_mmin",
+    "datasource": "hoist_controlsignals_speed_feedback_mmin",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistControlSignals_SpeedFeedback_mmin"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-hoist-controlsignals-motortorque",
+    "datasource": "hoist_controlsignals_motortorque",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["HoistControlSignals_MotorTorque"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-controlsignals-direction1-request",
+    "datasource": "trolley_controlsignals_direction1_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyControlSignals_Direction1_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-controlsignals-direction2-request",
+    "datasource": "trolley_controlsignals_direction2_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyControlSignals_Direction2_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-controlsignals-speed-request",
+    "datasource": "trolley_controlsignals_speed_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyControlSignals_Speed_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-controlsignals-speed-feedback",
+    "datasource": "trolley_controlsignals_speed_feedback",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyControlSignals_SpeedFeedback"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-controlsignals-speed-feedback_mmin",
+    "datasource": "trolley_controlsignals_speed_feedback_mmin",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyControlSignals_SpeedFeedback_mmin"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-controlsignals-motortorque",
+    "datasource": "trolley_controlsignals_motortorque",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyControlSignals_MotorTorque"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-controlsignals-direction1-request",
+    "datasource": "bridge_controlsignals_direction1_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeControlSignals_Direction1_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-controlsignals-direction2-request",
+    "datasource": "bridge_controlsignals_direction2_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeControlSignals_Direction2_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-controlsignals-speed-request",
+    "datasource": "bridge_controlsignals_speed_request",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeControlSignals_Speed_Request"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-controlsignals-speed-feedback",
+    "datasource": "bridge_controlsignals_speed_feedback",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeControlSignals_SpeedFeedback"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-controlsignals-speed-feedback_mmin",
+    "datasource": "bridge_controlsignals_speed_feedback_mmin",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeControlSignals_SpeedFeedback_mmin"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-controlsignals-motortorque",
+    "datasource": "bridge_controlsignals_motortorque",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeControlSignals_MotorTorque"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-ropeangle-angle-raw",
+    "datasource": "bridge_ropeangle_angle_raw",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeRopeAngle_Angle_Raw"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-bridge-ropeangle-angle-rad",
+    "datasource": "bridge_ropeangle_angle_rad",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["BridgeRopeAngle_Angle_rad"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-ropeangle-angle-raw",
+    "datasource": "trolley_ropeangle_angle_raw",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyRopeAngle_Angle_Raw"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-trolley-ropeangle-angle-rad",
+    "datasource": "trolley_ropeangle_angle_rad",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["TrolleyRopeAngle_Angle_rad"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-datetime",
+    "datasource": "datetime_datetime",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_DateTime"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-year",
+    "datasource": "datetime_year",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_Year"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-month",
+    "datasource": "datetime_month",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_Month"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-week",
+    "datasource": "datetime_weekday",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_Weekday"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-day",
+    "datasource": "datetime_day",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_Day"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-hour",
+    "datasource": "datetime_hour",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_Hour"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-minute",
+    "datasource": "datetime_minute",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_Minute"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-second",
+    "datasource": "datetime_second",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_Second"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-datetime-millisecond",
+    "datasource": "datetime_millisecond",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["DateTime_MilliSecond"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-readingcontrols",
+    "datasource": "readingcontrols",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["ReadingControls"],
+    "trigger": "event"
+  },
+  {
+    "routeId": "opcua-to-aas-watchdogfault",
+    "datasource": "watchdogfault",
+    "transformers": ["dataValueToJson", "jsonataExtractValue"],
+    "datasinks": ["WatchDogFault"],
+    "trigger": "event"
   }
 ]

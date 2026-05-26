@@ -303,5 +303,203 @@
     "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
     "idShortPath": "Status.Trolley.Diagnostics.Bypass_Active",
     "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistControlSignals_Direction1_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.ControlSignals.Direction1_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistControlSignals_Direction2_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.ControlSignals.Direction2_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistControlSignals_Speed_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.ControlSignals.Speed_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistControlSignals_SpeedFeedback",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.ControlSignals.SpeedFeedback",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistControlSignals_SpeedFeedback_mmin",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.ControlSignals.SpeedFeedback_mmin",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "HoistControlSignals_MotorTorque",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Hoist.ControlSignals.MotorTorque",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyControlSignals_Direction1_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.ControlSignals.Direction1_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyControlSignals_Direction2_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.ControlSignals.Direction2_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyControlSignals_Speed_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.ControlSignals.Speed_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyControlSignals_SpeedFeedback",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.ControlSignals.SpeedFeedback",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyControlSignals_SpeedFeedback_mmin",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.ControlSignals.SpeedFeedback_mmin",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyControlSignals_MotorTorque",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.ControlSignals.MotorTorque",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeControlSignals_Direction1_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.ControlSignals.Direction1_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeControlSignals_Direction2_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.ControlSignals.Direction2_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeControlSignals_Speed_Request",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.ControlSignals.Speed_Request",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeControlSignals_SpeedFeedback",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.ControlSignals.SpeedFeedback",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeControlSignals_SpeedFeedback_mmin",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.ControlSignals.SpeedFeedback_mmin",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeControlSignals_MotorTorque",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.ControlSignals.MotorTorque",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeRopeAngle_Angle_Raw",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.RopeAngle.Angle_Raw",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "BridgeRopeAngle_Angle_rad",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Bridge.RopeAngle.Angle_rad",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyRopeAngle_Angle_Raw",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.RopeAngle.Angle_Raw",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "TrolleyRopeAngle_Angle_rad",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.Trolley.RopeAngle.Angle_rad",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_DateTime",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.DateTime",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_Year",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.Year",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_Month",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.Month",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_Day",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.Day",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_Hour",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.Hour",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_Minute",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.Minute",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_Second",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.Second",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_MilliSecond",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.MilliSecond",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "DateTime_Weekday",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "DateTime.Weekday",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "ReadingControls",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.ReadingControls",
+    "api": "DotAAS-V3"
+  },
+  {
+    "uniqueId": "WatchDogFault",
+    "submodelEndpoint": "http://aas-env:8081/submodels/aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vODM0Ml83MDExXzUwNjJfMjAzMw",
+    "idShortPath": "Status.WatchDogFault",
+    "api": "DotAAS-V3"
   }
 ]

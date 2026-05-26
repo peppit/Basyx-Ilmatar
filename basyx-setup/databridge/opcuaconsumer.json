@@ -753,5 +753,534 @@
 			"keyStoreUrl": null,
 			"requestedPublishingInterval": 1000
 		}
+	},
+	{
+		"uniqueId": "hoist_controlsignals_direction1_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Hoist.ControlSignals.Direction1_Request",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "hoist_controlsignals_direction2_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Hoist.ControlSignals.Direction2_Request",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "hoist_controlsignals_speed_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Hoist.ControlSignals.SpeedRequest",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "hoist_controlsignals_speed_feedback",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Hoist.ControlSignals.SpeedFeedback",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "hoist_controlsignals_speed_feedback_mmin",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Hoist.ControlSignals.SpeedFeedback_mmin",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "hoist_controlsignals_motortorque",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Hoist.ControlSignals.MotorTorque",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "trolley_controlsignals_direction1_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Trolley.ControlSignals.Direction1_Request",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "trolley_controlsignals_direction2_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Trolley.ControlSignals.Direction2_Request",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "trolley_controlsignals_speed_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Trolley.ControlSignals.SpeedRequest",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "trolley_controlsignals_speed_feedback",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Trolley.ControlSignals.SpeedFeedback",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "trolley_controlsignals_speed_feedback_mmin",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Trolley.ControlSignals.SpeedFeedback_mmin",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "trolley_controlsignals_motortorque",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Trolley.ControlSignals.MotorTorque",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "bridge_controlsignals_direction1_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Bridge.ControlSignals.Direction1_Request",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "bridge_controlsignals_direction2_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Bridge.ControlSignals.Direction2_Request",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "bridge_controlsignals_speed_request",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Bridge.ControlSignals.SpeedRequest",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "bridge_controlsignals_speed_feedback",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Bridge.ControlSignals.SpeedFeedback",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "bridge_controlsignals_speed_feedback_mmin",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Bridge.ControlSignals.SpeedFeedback_mmin",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "bridge_controlsignals_motortorque",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Bridge.ControlSignals.MotorTorque",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "bridge_ropeangle_angle_raw",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Bridge.RopeAngle.Angle_Raw",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "bridge_ropeangle_angle_rad",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Bridge.RopeAngle.Angle_rad",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+	
+		"uniqueId": "trolley_ropeangle_angle_raw",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Trolley.RopeAngle.Angle_Raw",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "trolley_ropeangle_angle_rad",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.Trolley.RopeAngle.Angle_rad",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_datetime",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.DateTime",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_year",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.Year",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_day",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.Day",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_hour",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.Hour",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_minute",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.Minute",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_second",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.Second",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_millisecond",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.Millisecond",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_month",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.Month",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "datetime_weekday",
+		"nodeInformation": "ns=5;s=DX_Custom_V.DateTime.Weekday",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "readingcontrols",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.ReadingControls",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
+	},
+	{
+		"uniqueId": "watchdogfault",
+		"nodeInformation": "ns=5;s=DX_Custom_V.Status.WatchDogFault",
+		"serverUrl": "10.210.1.12",
+		"serverPort": 4840,
+		"pathToService": "",
+		"parameters": {
+			"allowedSecurityPolicies": "None",
+			"keyAlias": null,
+			"keyPassword": null,
+			"keyStoreType": null,
+			"keyStorePassword": null,
+			"keyStoreUrl": null,
+			"requestedPublishingInterval": 1000
+		}
 	}
 ]
